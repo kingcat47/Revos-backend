@@ -8,4 +8,5 @@ urlpatterns = [
     path('post/', include('article.urls')),
     path('get/', include('article.urls')),
     path('post/', include('vote.urls')),
+    path('get/', include('vote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
