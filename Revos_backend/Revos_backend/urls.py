@@ -11,4 +11,5 @@ urlpatterns = [
     path('get/', include('vote.urls')),
     path('post/', include('comment.urls')),
     path('get/', include('comment.urls')),
+    path('api/auth/', include('accounts.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

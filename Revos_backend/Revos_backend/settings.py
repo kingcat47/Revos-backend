@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'vote',
     'comment',
     'corsheaders',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Vite 개발 서버
 ]
 
+AUTH_USER_MODEL = 'accounts.User'
+
 CORS_ALLOW_CREDENTIALS = True
+
+from datetime import timedelta
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+}
 
 
